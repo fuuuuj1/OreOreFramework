@@ -7,5 +7,7 @@ services:
     tty: true # インタラクティブモード
     ports:
       - "8000:8000"
+    environment:
+      APP_ENV: dev
     command: 
       symfony server:start --listen-ip=0.0.0.0
