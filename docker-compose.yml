@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    stdin_open: true # コンテナの標準入力を開く
+    tty: true # インタラクティブモード
+    ports:
+      - "8000:8000"
+    command: 
+      symfony server:start --listen-ip=0.0.0.0
